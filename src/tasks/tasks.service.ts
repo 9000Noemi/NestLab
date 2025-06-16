@@ -27,9 +27,10 @@ export class TasksService {
     return this.tasks;
   }
 
+  //Método para crear nueva tarea.
   createTask(title: string, description: string) {
     const task = {
-      id: v4(),
+      id: v4(), //Genera un ID único con la función v4() del paquete uuid. 
       title,
       description,
       status: TaskStatus.PENDING
